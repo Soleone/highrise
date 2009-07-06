@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{highrise}
-  s.version = "0.13.0"
+  s.version = "0.13.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Marcos Tapaj\303\263s", "Ken Mayer"]
@@ -42,6 +42,7 @@ Highrise::Base.user = 'your_api_auth_token'
      "lib/highrise/company.rb",
      "lib/highrise/curlhelper.rb",
      "lib/highrise/curly.rb",
+     "lib/highrise/deal.rb",
      "lib/highrise/email.rb",
      "lib/highrise/group.rb",
      "lib/highrise/kase.rb",
