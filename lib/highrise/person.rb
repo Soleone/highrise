@@ -34,7 +34,8 @@ module Highrise
         custom_date[:assign_task]   = true
         custom_date[:task_owner_id] = task_owner_id 
       end
-      self.post(:contact_dates, :contact_date => custom_date)
+      # TODO: use different way to add date (current throws 406 from Highrise, but works anyways)
+      self.post(:contact_dates, :contact_date => custom_date) rescue nil
     end
     
   end
