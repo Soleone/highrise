@@ -9,6 +9,11 @@ module Highrise
       find(:first, :from => "/people/search.xml", :params => {:term => name})
     end
     
+    def self.find_all_by_tag(tag_name)
+      tag = Tag.find_by_name(tag_name)
+      find(:all, :from => "/tags/#{tag.id}.xml")
+    end
+    
     def self.find_all_across_pages_since(time)
       find_all_across_pages(:params => { :since => time.utc.to_s(:db).gsub(/[^\d]/, '') })
     end
